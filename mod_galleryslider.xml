@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Gallery Slider</name>
+	<author>Christian Friedemann</author>
+	<creationDate>February 2017</creationDate>
+	<copyright>Copyright (C) 2017 pixelstun.de. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>c.friedemann@pixelstun.de</authorEmail>
+	<authorUrl>www.pixelstun.de</authorUrl>
+	<version>1.0.0</version>
+        <description>MOD_GALLERYSLIDER_DESCRIPTION</description>
+	<files>
+		<filename module="mod_galleryslider">mod_galleryslider.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<filename>helper.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_galleryslider.ini</language>
+		<language tag="de-DE">de-DE.mod_galleryslider.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MENU" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="category"
+					   type="category"
+					   multiple="true"
+					   extension="com_content"
+					   label="MOD_GALLERYSLIDER_SELECT_CATEGORY"
+					   description="MOD_GALLERYSLIDER_SELECT_CATEGORY_DESC"
+				/>
+				<field name="count"
+					   type="number"
+					   default="1"
+					   label="MOD_GALLERYSLIDER_NUMBER_OF_ARTICLES"
+					   description=""
+					   min="1"
+					   max="10"
+					   step="1"
+				/>
+				<field name="order"
+					   type="groupedlist"
+					   label="MOD_GALLERYSLIDER_ORDER"
+					   default="0"
+				>
+					<option value="0">MOD_GALLERYSLIDER_ORDER_CREATED_DESC</option>
+					<option value="1">MOD_GALLERYSLIDER_ORDER_CREATED_ASC</option>
+					<option value="2">MOD_GALLERYSLIDER_ORDER_PUBLISHED_DESC</option>
+					<option value="3">MOD_GALLERYSLIDER_ORDER_PUBLISHED_ASC</option>
+					<option value="4">MOD_GALLERYSLIDER_ORDER_MODIFIED_DESC</option>
+					<option value="5">MOD_GALLERYSLIDER_ORDER_MODIFIED_ASC</option>
+					<option value="6">MOD_GALLERYSLIDER_ORDER_RANDOM</option>
+				</field>
+				<field name="words"
+					   type="number"
+					   label="MOD_GALLERYSLIDER_INTROTEXT_WORDS"
+					   description=""
+					   min="1"
+					   default="20"
+					   step="1"
+				/>
+				<field name="featuredOnly"
+					   type="radio"
+					   default="1"
+					   label="MOD_GALLERYSLIDER_FEATURED_ONLY"
+					   description=""
+					   class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+			</fieldset>
+			<fieldset name="settings">
+				<field name="height"
+					   description=""
+					   label="MOD_GALLERYSLIDER_HEIGHT"
+					   default="400px"
+					   type="text"
+				/>
+				<field name="autoplay"
+					   type="radio"
+					   default="autoplay"
+					   label="MOD_GALLERYSLIDER_AUTOPLAY"
+					   description=""
+					   class="btn-group btn-group-yesno"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="backgroundStyle"
+					   type="radio"
+					   default="contain"
+					   label="MOD_GALLERYSLIDER_BGSTYLE"
+					   description=""
+					   class="btn-group btn-group"
+				>
+					<option value="contain">contain</option>
+					<option value="cover">cover</option>
+				</field>
+				
+				<field name="showTitle"
+					   type="radio"
+					   default="1"
+					   label="MOD_GALLERYSLIDER_SHOW_TITLES"
+					   description=""
+					   class="btn-group btn-group-yesno"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="linkTitle"
+					   type="radio"
+					   default="1"
+					   label="MOD_GALLERYSLIDER_LINK_TITLES"
+					   description=""
+					   class="btn-group btn-group-yesno"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="readmore"
+					   type="radio"
+					   default="none"
+					   label="MOD_GALLERYSLIDER_READMORE"
+					   description=""
+					   class="btn-group btn-group"
+				>
+					<option value="none">JNO</option>
+					<option value="btn">Button</option>
+					<option value="link">Link</option>
+				</field>
+				<field name="hide"
+					   type="radio"
+					   default="0"
+					   label="MOD_GALLERYSLIDER_HIDE_ON_CLICK"
+					   description="MOD_GALLERYSLIDER_HIDE_ON_CLICK_DESC"
+					   class="btn-group btn-group-yesno"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="menuid"
+					   type="menuitem"
+					   default=""
+					   label="MOD_GALLERYSLIDER_MENUID"
+					   description="MOD_GALLERYSLIDER_MENUID_DESC"
+				>
+					<option	value="">JDEFAULT</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" name="Gallery Slider" priority="1">https://pixelstun.de/extensions/joomla/mod_galleryslider/galleryslider.xml</server>
+	</updateservers>
+</extension>
