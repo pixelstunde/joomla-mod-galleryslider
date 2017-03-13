@@ -618,10 +618,12 @@
   width: 100%;
   text-align: center;
   z-index: 100;
+  height: auto;
 }
+
 .gallery .control-button {
   display: inline-block;
-  margin: .5em .02em;
+  margin: 0 .02em .5em;
   font-size: 3em;
   text-align: center;
   text-decoration: none;
