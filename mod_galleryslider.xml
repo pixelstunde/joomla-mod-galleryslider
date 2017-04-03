@@ -7,8 +7,8 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>c.friedemann@pixelstun.de</authorEmail>
 	<authorUrl>www.pixelstun.de</authorUrl>
-	<version>1.0.0</version>
-        <description>MOD_GALLERYSLIDER_DESCRIPTION</description>
+	<version>1.1.0</version>
+        <description>Simple responsive Slider based on gallery.css</description>
 	<files>
 		<filename module="mod_galleryslider">mod_galleryslider.php</filename>
 		<folder>tmpl</folder>
@@ -52,11 +52,22 @@
 					<option value="5">MOD_GALLERYSLIDER_ORDER_MODIFIED_ASC</option>
 					<option value="6">MOD_GALLERYSLIDER_ORDER_RANDOM</option>
 				</field>
+				<field name="introtext"
+					   type="radio"
+					   default="1"
+					   label="MOD_GALLERYSLIDER_SHOW_INTROTEXT"
+					   description=""
+					   class="btn-group btn-group-yesno"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
 				<field name="words"
 					   type="number"
 					   label="MOD_GALLERYSLIDER_INTROTEXT_WORDS"
 					   description=""
-					   min="1"
+					   min="0"
 					   default="20"
 					   step="1"
 				/>
@@ -67,12 +78,20 @@
 					   description=""
 					   class="btn-group btn-group-yesno"
 				>
-					<option value="1">JYES</option>
 					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
 				
 			</fieldset>
 			<fieldset name="settings">
+				<field name="stylesheet"
+					   type="groupedlist"
+					   label="MOD_GALLERYSLIDER_STYLE"
+					   default="black"
+				>
+					<option value="black">black</option>
+					<option value="white">white</option>
+				</field>
 				<field name="height"
 					   description=""
 					   label="MOD_GALLERYSLIDER_HEIGHT"
@@ -81,7 +100,7 @@
 				/>
 				<field name="autoplay"
 					   type="radio"
-					   default="autoplay"
+					   default="1"
 					   label="MOD_GALLERYSLIDER_AUTOPLAY"
 					   description=""
 					   class="btn-group btn-group-yesno"

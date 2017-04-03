@@ -83,7 +83,7 @@ class ModGallerySliderHelper{
 			return false;
 		}
 		$text = strip_tags( $text, '<br><a>');
-		return implode( '', array_slice( preg_split( '/([\s,\.;\?\!]+)/' , $text , $numWords*2+1, PREG_SPLIT_DELIM_CAPTURE ), 0, $numWords*2-1 ) ) . '...';
+		return implode( '', array_slice( preg_split( '/([\s,\.;\?\!]+)/' , $text , $numWords*2+1, PREG_SPLIT_DELIM_CAPTURE ), 0, $numWords*2-1 ) ) . '&hellip;';
 	}
 	
 	/**
@@ -100,7 +100,7 @@ class ModGallerySliderHelper{
 		if ( $hide ) {
 			$menuid .= '&hideslider=1';
 		}
-		return '<a href="' . JRoute::_('index.php?view=article&id=' . $article->id . '&catid=' . $article->catid) . $menuid .'">' . $article->title . '</a>';
+		return '<a href="' . JRoute::_('index.php?view=article&id=' . $article->id . '&catid=' . $article->catid . $menuid ) . '">' . $article->title . '</a>';
 	}
 	
 	/**
@@ -118,8 +118,8 @@ class ModGallerySliderHelper{
 			$menuid .= '&hideslider=1';
 		}
 		if ( 'none' !== $readmore ) {
-			$text = str_replace( '...', '', JText::_('COM_CONTENT_READ_MORE_TITLE'));
-			return ' <a class="readmore '. $readmore . '" href="' . JRoute::_('index.php?view=article&id=' . $article->id . '&catid=' . $article->catid . $menuid ) . '">' . $text . '</a> ';
+			$text = str_replace( '...', '', JText::_( 'COM_CONTENT_READ_MORE_TITLE' ) );
+			return ' <a class="readmore '. $readmore . '" href="' . JRoute::_( 'index.php?view=article&id=' . $article->id . '&catid=' . $article->catid . $menuid ) . '">' . $text . '</a> ';
 		}
 	}
 }

@@ -21,23 +21,29 @@ foreach ( $articles as $article ) {
 		}
 	}
 	
+	$title = '<div class="headline">' . $title . '</div>';
+	
 	if ( ! empty( $images->image_intro ) ) {
 		$bg = ' style="background-image: url(\'' . $images->image_intro . '\')" ';
 	}
 	else {
 		$bg = '';
 	}
-	$boxContent = ModGallerySliderHelper::shortenText( $article->introtext, $words );
-	if ( false != $boxContent){
-		$boxContent = '<div class="spoilers">
-						<div class="content">
-							<div class="headline">
-								' . $title .'
-							</div>' .
-							$boxContent .
-							ModGallerySliderHelper::buildReadmoreLink( $article, $menuid, $readmore, $hide).
-						'</div>
-					</div>';
+
+	if ( true == $introtext ) {
+		$boxContent = ModGallerySliderHelper::shortenText( $article->introtext, $words );
+		if ( false != $boxContent){
+			$boxContent = '<div class="spoilers">
+							<div class="content">' .
+								$title .
+								$boxContent .
+								ModGallerySliderHelper::buildReadmoreLink( $article, $menuid, $readmore, $hide).
+							'</div>
+						</div>';
+		}
+	}
+	else {
+		$boxContent = '<div class="title-only">' . $title . '</div>';
 	}
 	$operators .= '<div id="item-' . ++$count . '" class="control-operator"></div>';
 	$figures .= '<figure class="item custom-controls" '. $bg .' >

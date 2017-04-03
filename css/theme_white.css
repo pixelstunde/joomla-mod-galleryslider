@@ -1,0 +1,151 @@
+
+.gallery .control-operator:target ~ .controls .control-button, .controls a {
+  color: #333;
+  color: rgba(0, 0, 0, 0.4); }
+
+.gallery .control-button:first-of-type, .gallery .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1), .gallery .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2), .gallery .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3), .gallery .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4), .gallery .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5), .gallery .control-operator:nth-of-type(6):target ~ .controls .control-button:nth-of-type(6), .gallery .control-operator:nth-of-type(7):target ~ .controls .control-button:nth-of-type(7), .gallery .control-operator:nth-of-type(8):target ~ .controls .control-button:nth-of-type(8), .gallery .control-operator:nth-of-type(9):target ~ .controls .control-button:nth-of-type(9), .gallery .control-operator:nth-of-type(10):target ~ .controls .control-button:nth-of-type(10) {
+  color: #000;
+  color: rgba(0, 0, 0, 0.8); }
+
+.gallery .item:first-of-type {
+  position: static;
+  pointer-events: auto;
+  opacity: 1; }
+.gallery .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .5s; }
+.gallery .control-operator {
+  display: none; }
+.gallery .control-operator:target ~ .item {
+  pointer-events: none;
+  opacity: 0;
+  animation: none; }
+.gallery .control-operator:target ~ .controls .control-button {
+  animation: none; }
+
+@keyframes controlAnimation-2 {
+  0% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); }
+  14.28571%,
+	  50% {
+    color: #000;
+    color: rgba(0, 0, 0, 0.8); }
+  64.28571%,
+	  100% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); } }
+
+@keyframes controlAnimation-3 {
+  0% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); }
+  9.52381%,
+	  33.33333% {
+    color: #000;
+    color: rgba(0, 0, 0, 0.8); }
+  42.85714%,
+	  100% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); } }
+    
+@keyframes controlAnimation-4 {
+  0% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); }
+  7.14286%,
+	  25% {
+    color: #000;
+    color: rgba(0, 0, 0, 0.8); }
+  32.14286%,
+	  100% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); } }
+@keyframes controlAnimation-5 {
+  0% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); }
+  5.71429%,
+	  20% {
+    color: #000;
+    color: rgba(0, 0, 0, 0.8); }
+  25.71429%,
+	  100% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); } }
+
+@keyframes controlAnimation-6 {
+  0% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); }
+  4.7619%,
+	  16.66667% {
+    color: #000;
+    color: rgba(0, 0, 0, 0.8); }
+  21.42857%,
+	  100% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); } }
+
+@keyframes controlAnimation-7 {
+  0% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); }
+  4.08163%,
+	  14.28571% {
+    color: #000;
+    color: rgba(0, 0, 0, 0.8); }
+  18.36735%,
+	  100% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); } }
+
+@keyframes controlAnimation-8 {
+  0% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); }
+  3.57143%,
+	  12.5% {
+    color: #000;
+    color: rgba(0, 0, 0, 0.8); }
+  16.07143%,
+	  100% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); } }
+
+@keyframes controlAnimation-9 {
+  0% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); }
+  3.1746%,
+	  11.11111% {
+    color: #000;
+    color: rgba(0, 0, 0, 0.8); }
+  14.28571%,
+	  100% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); } }
+
+@keyframes controlAnimation-10 {
+  0% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); }
+  2.85714%,
+	  10% {
+    color: #000;
+    color: rgba(0, 0, 0, 0.8); }
+  12.85714%,
+	  100% {
+    color: #333;
+    color: rgba(0, 0, 0, 0.4); } }
+
+.gallery .spoilers .content{
+  background: rgba(255,255,255,.8);
+  color: #333;
+}

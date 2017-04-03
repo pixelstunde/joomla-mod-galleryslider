@@ -614,7 +614,7 @@
 
 .gallery .controls {
   position: absolute;
-  bottom: 0;
+  bottom: 1.2em;
   width: 100%;
   text-align: center;
   z-index: 100;
@@ -623,8 +623,9 @@
 
 .gallery .control-button {
   display: inline-block;
-  margin: 0 .02em .5em;
-  font-size: 3em;
+  margin: 0 .02em;
+  line-height: .3;
+  font-size: 5em;
   text-align: center;
   text-decoration: none;
   transition: color .1s;
@@ -646,16 +647,11 @@
   bottom: 1em;
 }
 
-.gallery .spoilers .readmore{
-  position: relative;
-  z-index: 101;
-}
-
 .gallery .spoilers .content{
   background: rgba(0,0,0,.9);
-  padding: 1em 1em 2.5em;
+  padding: 2em 1em 3.5em;
   width: 80%;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 .gallery .spoilers .btn{
@@ -666,6 +662,22 @@
 
 .gallery .spoilers .headline{
   font-size: 2em;
-  line-height: 1.8;
   font-weight: 800;
+  line-height: 1.3;
+  margin: 0 auto .5em;
+}
+
+.title-only{
+  bottom: 4em;
+  min-height: 5em;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+.title-only .headline a{
+  text-shadow: 0 0 5px black;
+  color: #fff;
+  font-size: 5em;
+  font-weight: 600;
 }

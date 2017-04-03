@@ -24,17 +24,19 @@ $bgstyle =  $params->get( 'backgroundStyle', 'contain' );
 $category = $params->get( 'category', false );
 $count = (int) $params->get( 'count', 5 );
 $featuredOnly = (bool) $params->get( 'featuredOnly' , true );
-$height = $params->get('height' , 'auto');
-$hide = (bool) $params->get('hide' , false);
-$linkTitle =  (bool) $params->get('linkTitle' , false);
+$height = $params->get( 'height' , 'auto' );
+$hide = (bool) $params->get( 'hide' , false );
+$introtext = (bool) $params->get( 'introtext', true );
+$linkTitle =  (bool) $params->get( 'linkTitle' , false );
 $menuid = $params->get( 'menuid', '' );
 $order = (int) $params->get( 'order', 0 );
-$readmore = $params->get('readmore' , false);
-$showTitle =  (bool) $params->get('showTitle' , false);
+$readmore = $params->get( 'readmore' , false );
+$showTitle =  (bool) $params->get( 'showTitle' , false );
+$stylesheet = $params->get( 'stylesheet', 'black' );
 $words = (int) $params->get( 'words', 10 );
 
 //get articles
-$articles = ModGallerySliderHelper::getArticles( $count , $featuredOnly, $category, $order);
+$articles = ModGallerySliderHelper::getArticles( $count , $featuredOnly, $category, $order );
 
 //initialize variables for displaying
 $controls = '';
@@ -47,6 +49,10 @@ $count = 0;
 //add stylesheet
 $document = JFactory::getDocument();
 $document->addStylesheet( JURI::base(true).'/modules/mod_galleryslider/css/gallery.css' );
+
+if ('black' != $stylesheet ){
+	$document->addStylesheet( JURI::base(true).'/modules/mod_galleryslider/css/theme_' . $stylesheet . '.css' );
+}
 
 if ( 'auto' != $height ){
 	$style = 'height:' . $height . ';';
